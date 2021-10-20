@@ -4,7 +4,6 @@ const canvasH1 = () =>{
     let canvas = document.createElement('canvas');
     canvas.className="canvas";
     canvas.style.width = "100%";
-    canvas.style.backgroundColor = "blue";
     document.getElementById("firstHeading").append(canvas);
 
 }
