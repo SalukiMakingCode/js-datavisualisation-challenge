@@ -1,14 +1,44 @@
-/*******************Create canvas*******************/
+/**************************************Create canvas**************************************/
 const canvasGraph2 = () =>{
-
     let canvas = document.createElement('canvas');
     canvas.className="canvas";
     canvas.id="graph2";
     canvas.style.width = "100%";
-  //  canvas.style.backgroundColor = "blue";
+    //  canvas.style.backgroundColor = "blue";
+    document.getElementById("Crimes_et_d.C3.A9lits_enregistr.C3.A9s_par_les_services_de_police").prepend(canvas);
+}
+const canvasGraph2Menu = () =>{
+    let canvas = document.createElement('canvas');
+    canvas.className="menuCountry";
+    canvas.id="graph2Menu";
+    canvas.style.width = "100%";
+    //  canvas.style.backgroundColor = "blue";
     document.getElementById("Crimes_et_d.C3.A9lits_enregistr.C3.A9s_par_les_services_de_police").prepend(canvas);
 }
 canvasGraph2();
+canvasGraph2Menu();
+
+/**************************************Edit HTML by Javascript*******************************/
+let arrayCountry=document.querySelectorAll('.SELECT-TD-TO-WRITEaaaaamarchepas');
+for (let i=1;i<arrayCountry.length;i++) {
+  **logique  arrayCountry[].setAttribute("id", "i");
+  **logique  arrayCountry[].setAttribute("className", "country");
+}
+
+/**************************************When click a country*******************************/
+document.querySelectorAll('.country').forEach((element) =>
+    element.addEventListener('click', () => { clickButtonCountry(element.id);}));
+
+function clickButtonCountry (id) {
+    id=id.substring(7, 8);
+    changeCountry(id);
+}
+
+function changeCountry(id) {
+
+}
+
+/*******************draw horizontale bar by country (one build - need multi)************************/
 
 let ctx = document.getElementById('graph2');
 let graph2 = new Chart(ctx, {
@@ -16,7 +46,7 @@ let graph2 = new Chart(ctx, {
     data: {
         labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012'],
         datasets: [{
-            label: 'Belgium',
+            label: '',
             data: [12, 19, 3, 5, 2, 3, 15, 46, 25, 10, 15],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
