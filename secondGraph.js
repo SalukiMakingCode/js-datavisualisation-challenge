@@ -21,8 +21,8 @@ canvasGraph2Menu();
 /**************************************Edit HTML by Javascript*******************************/
 let arrayCountry=document.querySelectorAll('.SELECT-TD-TO-WRITEaaaaamarchepas');
 for (let i=1;i<arrayCountry.length;i++) {
-  **logique  arrayCountry[].setAttribute("id", "i");
-  **logique  arrayCountry[].setAttribute("className", "country");
+  //**logique  arrayCountry[].setAttribute("id", "i");
+  //**logique  arrayCountry[].setAttribute("className", "country");
 }
 
 /**************************************When click a country*******************************/
@@ -35,7 +35,7 @@ function clickButtonCountry (id) {
 }
 
 function changeCountry(id) {
-
+    animateCss('#my-element57', 'flipOutY');
 }
 
 /*******************draw horizontale bar by country (one build - need multi)************************/
