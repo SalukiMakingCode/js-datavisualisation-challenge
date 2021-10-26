@@ -19,10 +19,12 @@ canvasGraph2();
 canvasGraph2Menu();
 
 /**************************************Edit HTML by Javascript*******************************/
-let arrayCountry=document.querySelectorAll('.SELECT-TD-TO-WRITEaaaaamarchepas');
-for (let i=1;i<arrayCountry.length;i++) {
-  //**logique  arrayCountry[].setAttribute("id", "i");
-  //**logique  arrayCountry[].setAttribute("className", "country");
+let table1=document.getElementById("table1");
+let arrayCountry=table1.querySelectorAll('td');
+for (let i=0;i<arrayCountry.length;i++) {
+
+arrayCountry[i].setAttribute("id", "td"+i);
+if (i===0 || i%12===0) arrayCountry[i].setAttribute("className", "country");
 }
 
 /**************************************When click a country*******************************/
@@ -35,13 +37,13 @@ function clickButtonCountry (id) {
 }
 
 function changeCountry(id) {
-    animateCss('#my-element57', 'flipOutY');
+   // animateCss('#my-element57', 'flipOutY');
 }
 
 /*******************draw horizontale bar by country (one build - need multi)************************/
 
-let ctx = document.getElementById('graph2');
-let graph2 = new Chart(ctx, {
+let ctx2 = document.getElementById('graph2');
+let graph2 = new Chart(ctx2, {
     type: 'bar',
     data: {
         labels: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012'],
