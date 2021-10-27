@@ -59,9 +59,13 @@ function clickButtonCountry (id) {
 }
 
 function changeCountry(id) {
-    graph2.destroy();
-    drawGraph(id);
-   // animateCss('#my-element57', 'flipOutY');
+
+    animateCss('#graph2', 'zoomOutLeft').then((message) => {
+        graph2.destroy();
+        drawGraph(id);
+        animateCss('#graph2', 'backInLeft'); //zoomOutLeft
+    });
+
 }
 
 /***************************draw horizontale bar by country*******************************/
